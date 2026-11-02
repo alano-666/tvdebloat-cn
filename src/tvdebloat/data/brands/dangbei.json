@@ -1,0 +1,16 @@
+{
+  "name": "当贝（多品牌电视预装）",
+  "adb_note": "部分品牌（海信/创维/长虹等）电视预装当贝桌面，按各品牌方法开启 adb 后使用。",
+  "packages": [
+    {
+      "package": "com.dangbei.tvlauncher",
+      "name": "当贝桌面",
+      "category": "preinstall",
+      "risk": "high",
+      "recommended": "disable",
+      "confidence": "medium",
+      "note": "部分电视预装并设为默认桌面，直接禁用会无法回到桌面；仅当已安装并设置其他默认桌面后，再配合 --include-high-risk 操作",
+      "source": "社区验证"
+    }
+  ]
+}

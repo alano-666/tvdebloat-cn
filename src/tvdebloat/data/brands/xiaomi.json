@@ -1,0 +1,86 @@
+{
+  "name": "小米电视 / 红米电视（MIUI TV）",
+  "adb_note": "设置 → 关于 → 连续点击「版本号」开启开发者选项 → 开启「USB 调试」与「网络调试」。Wi-Fi 连接后使用 tvdebloat scan --host <电视IP>:5555。",
+  "packages": [
+    {
+      "package": "com.xiaomi.mitv.advertise",
+      "name": "开机广告服务",
+      "category": "ad",
+      "risk": "low",
+      "recommended": "disable",
+      "confidence": "high",
+      "note": "小米电视开机广告核心组件，禁用后开机广告消失",
+      "source": "社区广泛验证"
+    },
+    {
+      "package": "com.miui.systemAdSolution",
+      "name": "MIUI 系统广告",
+      "category": "ad",
+      "risk": "low",
+      "recommended": "disable",
+      "confidence": "high",
+      "note": "MIUI 通用广告投放组件，部分机型存在；设备上没有会自动跳过",
+      "source": "UAD 列表 / 社区广泛验证"
+    },
+    {
+      "package": "com.xiaomi.ab",
+      "name": "小米广告后台",
+      "category": "ad",
+      "risk": "medium",
+      "recommended": "disable",
+      "confidence": "medium",
+      "note": "广告调度后台，部分机型存在；禁用可能影响少量内嵌广告位",
+      "source": "UAD 列表"
+    },
+    {
+      "package": "com.xiaomi.mitv.tvmanager",
+      "name": "电视管家",
+      "category": "preinstall",
+      "risk": "low",
+      "recommended": "disable",
+      "confidence": "medium",
+      "note": "内置清理与推广入口，不使用可禁用",
+      "source": "社区验证"
+    },
+    {
+      "package": "com.mitv.gallery",
+      "name": "相册",
+      "category": "preinstall",
+      "risk": "low",
+      "recommended": "disable",
+      "confidence": "medium",
+      "note": "不使用本地相册可禁用",
+      "source": "社区验证"
+    },
+    {
+      "package": "com.xiaomi.mitv.upgrade",
+      "name": "系统升级（OTA）",
+      "category": "ota",
+      "risk": "medium",
+      "recommended": "disable",
+      "confidence": "high",
+      "note": "禁用后停止系统更新，仅建议确认不再需要更新时操作",
+      "source": "社区广泛验证"
+    },
+    {
+      "package": "com.xiaomi.mitv.appstore",
+      "name": "应用商店",
+      "category": "system",
+      "risk": "medium",
+      "recommended": "keep",
+      "confidence": "medium",
+      "note": "禁用后无法安装应用，不推荐操作",
+      "source": "社区验证"
+    },
+    {
+      "package": "com.mitv.tvhome",
+      "name": "小米电视桌面（PatchWall）",
+      "category": "system",
+      "risk": "high",
+      "recommended": "disable",
+      "confidence": "high",
+      "note": "禁用后无法回到桌面；仅当已安装第三方桌面（如 aerial-tv）并设为默认后，再配合 --include-high-risk 操作",
+      "source": "社区广泛验证"
+    }
+  ]
+}

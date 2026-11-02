@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tvdebloat-cn"
+version = "0.1.0"
+description = "国产智能电视去广告工具箱：Wi-Fi adb 连接，数据驱动的清理计划，默认 dry-run，可回滚"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["tv", "debloat", "adb", "xiaomi", "chinese-tv", "android-tv"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.scripts]
+tvdebloat = "tvdebloat.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tvdebloat = ["data/brands/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
